@@ -1,13 +1,20 @@
 import react from "react";
-import ReactDOM from "react-dom";
+import reactDOM from "react-dom";
 import Header from "./Header";
-import Note from "./Note";
-import Footer from "./Footer";
+import Note from "./note";
+import Footer from "./footer";
+import notes from "./notes";
 
-ReactDOM.render(
+function createNote(notes) {
+  return (
+    <Note key={notes.key} title={notes.title} content={notes.content}></Note>
+  );
+}
+
+reactDOM.render(
   <div>
     <Header />
-    <Note />
+    {notes.map(createNote)}
     <Footer />
   </div>,
 
