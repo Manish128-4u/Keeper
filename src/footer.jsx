@@ -1,8 +1,9 @@
-import react from "react";
+import React from "react";
+
 function Footer() {
   return (
     <footer>
-      <p>Copyright @ 2022</p>
+      <p>Copyright ⓒ 2021</p>
     </footer>
   );
 }
